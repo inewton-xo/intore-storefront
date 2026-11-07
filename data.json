@@ -1,8 +1,30 @@
 {
- "settings": {"momoNumber": "", "momoName": "", "whatsapp": "", "email": "", "cardLink": ""},
- "photos": {},
+ "settings": {
+  "momoNumber": "",
+  "momoName": "",
+  "whatsapp": "",
+  "email": "",
+  "cardLink": ""
+ },
+ "photos": {
+  "s1": "images/step1.jpg",
+  "s2": "images/step2.jpg",
+  "s3": "images/step3.jpg"
+ },
  "products": [
-  {"id": "p1", "name": "Sample item one", "price": 5000, "details": "Replace or delete this item from the Admin panel.", "img": ""},
-  {"id": "p2", "name": "Sample item two", "price": 12000, "details": "Add your own items with a price, details and photo.", "img": ""}
+  {
+   "id": "p1",
+   "name": "Sample item one",
+   "price": 5000,
+   "details": "Replace or delete this item from the Admin panel.",
+   "img": ""
+  },
+  {
+   "id": "p2",
+   "name": "Sample item two",
+   "price": 12000,
+   "details": "Add your own items with a price, details and photo.",
+   "img": ""
+  }
  ]
 }
