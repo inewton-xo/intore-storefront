@@ -6,59 +6,71 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231445ff'/%3E%3Ctext x='50' y='72' font-size='64' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'%3EI%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--b:#1445ff;--bl:#eaf0ff;--k:#0a0a0a;--w:#fff}
+:root{--bg:#f4ecd8;--bg2:#e8dcbf;--cd:#fbf7ec;--g:#4b5320;--g2:#363c17}
 *{box-sizing:border-box;margin:0}
-body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--w);color:var(--k);line-height:1.5}
-a{color:inherit}button,input,textarea{font:inherit;color:inherit}
-.btn{background:var(--b);color:#fff;border:2px solid var(--k);padding:10px 18px;font-weight:700;border-radius:10px;cursor:pointer;box-shadow:3px 3px 0 var(--k);transition:.12s}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--k)}
-.btn.k{background:var(--k)}.btn.w{background:#fff;color:var(--k)}.btn[disabled]{opacity:.4;pointer-events:none}
-header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:2px solid var(--k);display:flex;align-items:center;justify-content:space-between;padding:12px 5vw}
-.logo{font-weight:700;font-size:1.4rem;letter-spacing:.1em;text-decoration:none}.logo b{color:var(--b)}
-.hero{background:var(--b);color:#fff;padding:8vw 5vw 6vw;border-bottom:2px solid var(--k)}
-.hero h1{font-size:clamp(3.4rem,17vw,12rem);line-height:.9;letter-spacing:-.03em}
-.hero p{max-width:520px;margin:18px 0 26px;font-size:1.15rem}
-.mq{background:var(--k);color:#fff;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:700;letter-spacing:.18em;border-bottom:2px solid var(--k)}
-.mq span{display:inline-block;animation:m 25s linear infinite}
-@keyframes m{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.mq span{animation:none}}
-main{padding:48px 5vw}
-.bar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:28px}
-.bar h2{font-size:2rem}
-input,textarea{border:2px solid var(--k);border-radius:10px;padding:10px 12px;width:100%;background:#fff;margin:4px 0 10px}
-input:focus,textarea:focus{outline:3px solid var(--b)}
-#q{max-width:300px;margin:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:26px}
-.card{border:2px solid var(--k);border-radius:16px;overflow:hidden;background:#fff;box-shadow:6px 6px 0 var(--b);display:flex;flex-direction:column}
-.im{aspect-ratio:1;background:var(--bl);display:grid;place-items:center;font-size:4rem;font-weight:700;color:var(--b);border-bottom:2px solid var(--k)}
+body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--g2);line-height:1.45}
+a{color:inherit}button,input,textarea,select{font:inherit;color:inherit}
+.btn{background:var(--g);color:var(--bg);border:2px solid var(--g);padding:11px 20px;font-weight:700;border-radius:999px;cursor:pointer;transition:.15s;text-decoration:none;display:inline-block}
+.btn:hover{background:var(--g2);border-color:var(--g2)}.btn.w{background:transparent;color:var(--g)}.btn.w:hover{background:var(--bg2)}.btn.k{background:var(--g2)}.btn[disabled]{opacity:.4;pointer-events:none}
+header{position:sticky;top:0;z-index:5;background:var(--cd);border-bottom:1px solid var(--bg2);display:flex;align-items:center;gap:16px;padding:12px 4vw;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.5rem;letter-spacing:.06em;color:var(--g);text-decoration:none}
+.sb{flex:1;min-width:230px;display:flex;align-items:center;background:#fffdf6;border:2px solid var(--g);border-radius:999px;padding:4px 4px 4px 18px}
+.sb input{border:0;background:transparent;margin:0;padding:8px 6px;outline:0;border-radius:0}
+.sb .btn{padding:8px 20px}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:20px 4vw}
+.hb{background:var(--g);color:var(--bg);border-radius:24px;padding:clamp(24px,5vw,52px)}
+.hb h1{font-size:clamp(2.4rem,6.5vw,5rem);line-height:1;letter-spacing:-.02em}
+.hb p{max-width:460px;margin:14px 0 22px;font-size:1.1rem;opacity:.9}
+.hb .btn{background:var(--bg);color:var(--g);border-color:var(--bg)}
+.hs{display:grid;gap:16px}
+.ht{background:var(--bg2);border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:center}
+.ht b{font-size:1.2rem;color:var(--g)}.ht span{font-size:.95rem;opacity:.8}
+.sec{padding:14px 4vw 10px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.sh h2{font-size:1.6rem;color:var(--g)}.sh span{opacity:.7;font-size:.9rem}
+.row{display:flex;gap:16px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.row .card{min-width:200px;max-width:200px;scroll-snap-align:start}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px}
+.card{background:var(--cd);border-radius:18px;overflow:hidden;border:1px solid var(--bg2);transition:.15s}
+.card:hover{box-shadow:0 8px 20px rgba(54,60,23,.18);transform:translateY(-2px)}
+.im{aspect-ratio:1;background:var(--bg2);position:relative;display:grid;place-items:center;font-size:3.5rem;font-weight:700;color:var(--g)}
 .im img{width:100%;height:100%;object-fit:cover}
-.cb{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}.cb p{opacity:.7;font-size:.92rem;flex:1}
-.pr{font-weight:700;font-size:1.2rem;color:var(--b)}
-.empty{padding:40px;border:2px dashed var(--k);border-radius:16px;text-align:center}
-.ov{position:fixed;inset:0;background:rgba(10,10,10,.6);display:none;z-index:20}.ov.on{display:block}
-.dr{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;border-left:2px solid var(--k);z-index:21;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;padding:20px}.dr.on{transform:none}
+.plus{position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--g);color:var(--bg);border:0;font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:0 3px 8px rgba(54,60,23,.35)}
+.st{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:10px;background:var(--g);color:var(--bg);border-radius:999px;padding:4px;font-weight:700}
+.st button{width:32px;height:32px;border-radius:50%;background:var(--bg);color:var(--g);border:0;cursor:pointer;font-weight:700;font-size:1.1rem}
+.cb{padding:12px 14px 16px}.pr{font-weight:800;font-size:1.2rem;color:var(--g)}.cb b{font-weight:600;display:block}
+.cb p{opacity:.7;font-size:.85rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ct{display:inline-block;margin-top:8px;border:1.5px solid var(--g);border-radius:999px;padding:3px 12px;font-size:.82rem;text-decoration:none;color:var(--g);font-weight:600}
+.empty{grid-column:1/-1;padding:40px;border:2px dashed var(--g);border-radius:18px;text-align:center}
+input,textarea{border:1.5px solid var(--g);border-radius:12px;padding:10px 12px;width:100%;background:#fffdf6;margin:4px 0 10px}
+input:focus,textarea:focus{outline:3px solid var(--bg2)}
+.ov{position:fixed;inset:0;background:rgba(54,60,23,.55);display:none;z-index:20}.ov.on{display:block}
+.dr{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--cd);box-shadow:-8px 0 30px rgba(54,60,23,.3);z-index:21;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;padding:20px}.dr.on{transform:none}
 .dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 #cl{flex:1;overflow:auto}
-.cr{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:2px solid var(--bl)}
-.q{display:flex;align-items:center;gap:8px}.q button{width:30px;height:30px;border:2px solid var(--k);border-radius:8px;background:#fff;cursor:pointer;font-weight:700}
+.cr{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--bg2)}
+.q{display:flex;align-items:center;gap:8px}.q button{width:30px;height:30px;border:0;border-radius:50%;background:var(--g);color:var(--bg);cursor:pointer;font-weight:700}
 .tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem;padding:14px 0}
 .md{position:fixed;inset:0;z-index:22;display:none;place-items:center;padding:14px}.md.on{display:grid}
-.mb{background:#fff;border:2px solid var(--k);border-radius:16px;box-shadow:8px 8px 0 var(--b);padding:22px;width:min(540px,100%);max-height:92vh;overflow:auto}
-.mb h3{font-size:1.5rem;margin-bottom:10px}.mb h4{margin:14px 0 4px;color:var(--b)}.mb label{font-weight:500;font-size:.9rem}
+.mb{background:var(--cd);border-radius:22px;box-shadow:0 20px 50px rgba(54,60,23,.4);padding:24px;width:min(540px,100%);max-height:92vh;overflow:auto}
+.mb h3{font-size:1.5rem;margin-bottom:10px;color:var(--g)}.mb h4{margin:14px 0 4px;color:var(--g)}.mb label{font-weight:500;font-size:.9rem}
 .pm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
-.pm label{border:2px solid var(--k);border-radius:10px;padding:12px;cursor:pointer;font-weight:700;display:block;text-align:center}
-.pm input{display:none;}.pm label:has(input:checked){background:var(--b);color:#fff}
-.note{background:var(--bl);border:2px solid var(--b);border-radius:10px;padding:12px;margin:10px 0;font-size:.95rem}
-.al{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--bl)}
-footer{background:var(--k);color:#fff;padding:44px 5vw 28px}
-footer h3{color:#fff;margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-size:.92rem;opacity:.85}footer li{margin-bottom:8px}
-.fb{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.25);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.85rem}
-.fb a{opacity:.7}
+.pm label{border:1.5px solid var(--g);border-radius:12px;padding:12px;cursor:pointer;font-weight:700;display:block;text-align:center}
+.pm input{display:none}.pm label:has(input:checked){background:var(--g);color:var(--bg)}
+.note{background:var(--bg2);border-left:4px solid var(--g);border-radius:10px;padding:12px;margin:10px 0;font-size:.95rem}
+.al{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid var(--bg2)}
+footer{background:var(--g);color:var(--bg);padding:44px 4vw 28px;margin-top:30px}
+footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-size:.92rem;opacity:.9}footer li{margin-bottom:8px}
+.fb{margin-top:28px;padding-top:16px;border-top:1px solid rgba(244,236,216,.3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.85rem}.fb a{opacity:.7}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hs{grid-template-columns:1fr 1fr}.sb{order:3;flex-basis:100%}header .btn{margin-left:auto}}
 </style></head><body>
-<header><a class="logo" href="#">INTO<b>RE</b></a><button class="btn" onclick="openCart()">Cart (<span id="cc">0</span>)</button></header>
-<section class="hero"><h1>INTORE</h1><p>Your storefront for things worth having. Pick what you love, pay by card or mobile money, done.</p><a class="btn w" href="#shop" style="text-decoration:none;display:inline-block">Shop now</a></section>
-<div class="mq"><span id="mq"></span></div>
-<main id="shop"><div class="bar"><h2>The shop</h2><input id="q" type="search" placeholder="Search items" oninput="draw()"></div><div class="grid" id="g"></div></main>
+<header><a class="logo" href="#">INTORE</a>
+<div class="sb"><input id="q" type="search" placeholder="Search items" oninput="draw()" aria-label="Search items"><button class="btn" onclick="draw();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Search</button></div>
+<button class="btn" onclick="openCart()">Cart · <span id="cc">0</span> · <span id="hc">0 RWF</span></button></header>
+<section class="hero"><div class="hb"><h1>Shop smart.<br>Pay your way.</h1><p>Browse the INTORE storefront, add what you need, and pay by card or mobile money.</p><a class="btn" href="#shop">Start shopping</a></div>
+<div class="hs"><div class="ht"><b>Mobile Money</b><span>Pay with MoMo, then confirm on WhatsApp.</span></div><div class="ht"><b>Card payments</b><span>Secure checkout through our payment link.</span></div></div></section>
+<section class="sec" id="nwS"><div class="sh"><h2>Just added</h2></div><div class="row" id="nw"></div></section>
+<section class="sec" id="shop"><div class="sh"><h2>All items</h2><span id="rc"></span></div><div class="grid" id="g"></div></section>
 <footer><h3 id="terms">Terms &amp; Conditions</h3><ol>
 <li><b>Orders.</b> An order is confirmed only after we verify your payment and reply to you by WhatsApp or email.</li>
 <li><b>Prices.</b> All prices are in Rwandan francs (RWF). We may correct pricing errors and will contact you before processing an affected order.</li>
@@ -95,12 +107,14 @@ try{cart=JSON.parse(localStorage.getItem('ic')||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem('ic',JSON.stringify(cart))}catch(e){}};
 const P=i=>D.products.find(p=>p.id==i);
 const total=()=>Object.keys(cart).reduce((s,i)=>s+(P(i)?P(i).price*cart[i]:0),0);
-function draw(){const q=$('q').value.toLowerCase(),l=D.products.filter(p=>(p.name+p.details).toLowerCase().includes(q));
-$('g').innerHTML=l.length?l.map(p=>`<div class="card"><div class="im">${p.img?`<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">`:esc(p.name[0]||'I')}</div><div class="cb"><b>${esc(p.name)}</b><p>${esc(p.details)}</p><div class="pr">${fmt(p.price)}</div><button class="btn" onclick="add('${p.id}')">Add to cart</button></div></div>`).join(''):'<div class="empty">No items yet. Check back soon.</div>';cartUI()}
-function add(i){cart[i]=(cart[i]||0)+1;cartUI();openCart()}
-function chg(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];cartUI()}
+const card=p=>{const n=cart[p.id],w=D.settings.whatsapp.replace(/\D/g,'');return`<div class="card"><div class="im">${p.img?`<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">`:esc(p.name[0]||'I')}${n?`<div class="st"><button onclick="chg('${p.id}',-1)">−</button>${n}<button onclick="chg('${p.id}',1)">+</button></div>`:`<button class="plus" aria-label="Add to cart" onclick="add('${p.id}')">+</button>`}</div><div class="cb"><div class="pr">${fmt(p.price)}</div><b>${esc(p.name)}</b><p>${esc(p.details)}</p>${w?`<a class="ct" target="_blank" rel="noopener" href="https://wa.me/${w}?text=${encodeURIComponent('Hi, I am interested in '+p.name)}">Contact seller</a>`:''}</div></div>`};
+function draw(){const q=$('q').value.toLowerCase().trim(),l=D.products.filter(p=>(p.name+p.details).toLowerCase().includes(q));
+$('g').innerHTML=l.length?l.map(card).join(''):'<div class="empty">No items found.</div>';$('rc').textContent=l.length+' item'+(l.length==1?'':'s');
+const nw=D.products.slice(-8).reverse();$('nwS').style.display=(!q&&D.products.length>4)?'':'none';$('nw').innerHTML=nw.map(card).join('');cartUI()}
+function add(i){cart[i]=(cart[i]||0)+1;draw()}
+function chg(i,d){cart[i]=(cart[i]||0)+d;if(cart[i]<=0)delete cart[i];draw()}
 function cartUI(){Object.keys(cart).forEach(i=>{if(!P(i))delete cart[i]});save();const k=Object.keys(cart);
-$('cc').textContent=k.reduce((s,i)=>s+cart[i],0);$('ct').textContent=fmt(total());$('cb').disabled=!k.length;
+$('cc').textContent=k.reduce((s,i)=>s+cart[i],0);$('ct').textContent=fmt(total());$('hc').textContent=fmt(total());$('cb').disabled=!k.length;
 $('cl').innerHTML=k.length?k.map(i=>{const p=P(i);return`<div class="cr"><div><b>${esc(p.name)}</b><br>${fmt(p.price)}</div><div class="q"><button onclick="chg('${i}',-1)">−</button>${cart[i]}<button onclick="chg('${i}',1)">+</button></div></div>`}).join(''):'<p>Your cart is empty.</p>'}
 const show=(...ids)=>{closeAll();$('ov').classList.add('on');ids.forEach(i=>$(i).classList.add('on'))};
 function closeAll(){['ov','dr','co','adm'].forEach(i=>$(i).classList.remove('on'))}
@@ -130,6 +144,6 @@ sessionStorage.setItem('it',$('tk').value.trim());D.settings={momoNumber:$('sm')
 try{st.textContent='Publishing…';for(const p of D.products)if(p.img.startsWith('data:')){const path=`images/${p.id}.jpg`;await gh(path,p.img.split(',')[1]);p.img=path}
 await gh('data.json',btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))));st.textContent='Published. The live site updates in about a minute.';draw()}catch(e){st.textContent='Failed: '+e.message}}
 // ---- Init ----
-$('yr').textContent=new Date().getFullYear();$('mq').textContent=('SHOP · PAY BY CARD OR MOMO · FAST DELIVERY · INTORE · ').repeat(14);
+$('yr').textContent=new Date().getFullYear();
 fetch('data.json?'+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{if(d&&d.products)D=d;draw()});draw();
 </script></body></html>
