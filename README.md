@@ -1,14 +1,10 @@
-# Root & Stake
+# INTORE Storefront
 
-A static plant-care storefront. No build step: `index.html` is the whole site.
+Static storefront. No build step.
 
-## Edit
-- Products, email and payment link: the `CONFIG` and `products` blocks near the bottom of `index.html`
-- Product photos: put files in `images/` and set `img: 'name.jpg'` on the product
-- Colors: the `:root` variables at the top of the CSS
+- `index.html`: the site (cart, checkout, admin panel, terms)
+- `data.json`: items and payment/contact settings
+- `images/`: product photos
 
-## Run locally
-Open `index.html` in a browser.
-
-## Host (GitHub Pages)
-Settings → Pages → Deploy from a branch → `main` / `(root)`.
+Manage items with the Admin link in the footer, or edit `data.json` directly.
+Hosted with GitHub Pages (Settings, Pages, branch `main`, root).
