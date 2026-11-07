@@ -7,4 +7,4 @@ Static storefront. No build step.
 - `images/`: product photos
 
 Manage items with the Admin link in the footer, or edit `data.json` directly.
-Hosted with GitHub Pages (Settings, Pages, branch `main`, root).
+Hosted with GitHub Pages (Settings, Pages, branch `main`, root). Live at https://inewton-xo.github.io/intore-storefront/

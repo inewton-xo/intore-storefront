@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://inewton-xo.github.io/intore-storefront/sitemap.xml

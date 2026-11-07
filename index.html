@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>INTORE Storefront</title>
-<meta name="description" content="INTORE Storefront: shop online and pay by card or mobile money.">
-<meta name="theme-color" content="#1445ff">
+<title>INTORE Storefront | Your trusted place to shop</title>
+<meta name="description" content="INTORE Storefront is your trusted place to shop online. Browse items, pay by card or mobile money (MoMo) and get your order delivered.">
+<meta name="keywords" content="INTORE, INTORE Storefront, online shop, MoMo, mobile money, shop online Rwanda">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://inewton-xo.github.io/intore-storefront/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="INTORE Storefront"><meta property="og:title" content="INTORE Storefront | Your trusted place to shop"><meta property="og:description" content="Shop online and pay by card or mobile money."><meta property="og:url" content="https://inewton-xo.github.io/intore-storefront/">
+<meta name="twitter:card" content="summary"><meta name="theme-color" content="#4b5320">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"INTORE Storefront","alternateName":"INTORE","url":"https://inewton-xo.github.io/intore-storefront/"},{"@type":"Store","name":"INTORE Storefront","url":"https://inewton-xo.github.io/intore-storefront/","description":"Your trusted place to shop. Pay by card or mobile money."}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231445ff'/%3E%3Ctext x='50' y='72' font-size='64' font-weight='900' text-anchor='middle' fill='white' font-family='Arial'%3EI%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -13,18 +18,9 @@ a{color:inherit}button,input,textarea,select{font:inherit;color:inherit}
 .btn{background:var(--g);color:var(--bg);border:2px solid var(--g);padding:11px 20px;font-weight:700;border-radius:999px;cursor:pointer;transition:.15s;text-decoration:none;display:inline-block}
 .btn:hover{background:var(--g2);border-color:var(--g2)}.btn.w{background:transparent;color:var(--g)}.btn.w:hover{background:var(--bg2)}.btn.k{background:var(--g2)}.btn[disabled]{opacity:.4;pointer-events:none}
 header{position:sticky;top:0;z-index:5;background:var(--cd);border-bottom:1px solid var(--bg2);display:flex;align-items:center;gap:16px;padding:12px 4vw;flex-wrap:wrap}
-.logo{font-weight:800;font-size:1.5rem;letter-spacing:.06em;color:var(--g);text-decoration:none}
 .sb{flex:1;min-width:230px;display:flex;align-items:center;background:#fffdf6;border:2px solid var(--g);border-radius:999px;padding:4px 4px 4px 18px}
 .sb input{border:0;background:transparent;margin:0;padding:8px 6px;outline:0;border-radius:0}
 .sb .btn{padding:8px 20px}
-.hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:20px 4vw}
-.hb{background:var(--g);color:var(--bg);border-radius:24px;padding:clamp(24px,5vw,52px)}
-.hb h1{font-size:clamp(2.4rem,6.5vw,5rem);line-height:1;letter-spacing:-.02em}
-.hb p{max-width:460px;margin:14px 0 22px;font-size:1.1rem;opacity:.9}
-.hb .btn{background:var(--bg);color:var(--g);border-color:var(--bg)}
-.hs{display:grid;gap:16px}
-.ht{background:var(--bg2);border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:center}
-.ht b{font-size:1.2rem;color:var(--g)}.ht span{font-size:.95rem;opacity:.8}
 .sec{padding:14px 4vw 10px}
 .sh{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:14px;flex-wrap:wrap}
 .sh h2{font-size:1.6rem;color:var(--g)}.sh span{opacity:.7;font-size:.9rem}
@@ -62,13 +58,25 @@ input:focus,textarea:focus{outline:3px solid var(--bg2)}
 footer{background:var(--g);color:var(--bg);padding:44px 4vw 28px;margin-top:30px}
 footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-size:.92rem;opacity:.9}footer li{margin-bottom:8px}
 .fb{margin-top:28px;padding-top:16px;border-top:1px solid rgba(244,236,216,.3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.85rem}.fb a{opacity:.7}
-@media(max-width:760px){.hero{grid-template-columns:1fr}.hs{grid-template-columns:1fr 1fr}.sb{order:3;flex-basis:100%}header .btn{margin-left:auto}}
+@media(max-width:760px){.sb{order:3;flex-basis:100%}header .btn{margin-left:auto}}
+.logo{display:flex;align-items:baseline;gap:7px;background:var(--g);color:var(--bg);padding:8px 16px;border-radius:14px;font-weight:800;font-size:1.35rem;letter-spacing:.08em;text-decoration:none;box-shadow:0 3px 0 var(--g2)}
+.logo small{font-size:.6rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.hero{margin:14px 4vw 0;background:var(--g);color:var(--bg);border-radius:18px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hero h1{font-size:clamp(1.3rem,3.2vw,1.9rem);line-height:1.2}.hero p{font-size:.9rem;opacity:.85}
+.chips{display:flex;gap:8px;flex-wrap:wrap}.chips span{background:rgba(244,236,216,.18);border-radius:999px;padding:5px 14px;font-size:.85rem}
+.ask{position:fixed;right:18px;bottom:18px;z-index:15;box-shadow:0 6px 18px rgba(54,60,23,.35)}
+.chat{position:fixed;right:18px;bottom:18px;z-index:16;width:min(360px,calc(100% - 36px));height:min(520px,calc(100% - 100px));background:var(--cd);border-radius:20px;box-shadow:0 14px 40px rgba(54,60,23,.4);display:none;flex-direction:column;overflow:hidden}.chat.on{display:flex}
+.ch{background:var(--g);color:var(--bg);padding:12px 16px;display:flex;justify-content:space-between;align-items:center}.ch button{background:none;border:0;color:var(--bg);font-size:1.5rem;cursor:pointer;line-height:1}
+#cm{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:85%;padding:9px 13px;border-radius:16px;font-size:.92rem}.m a{text-decoration:underline;font-weight:600}
+.m.b{background:var(--bg2);align-self:flex-start;border-bottom-left-radius:4px}.m.u{background:var(--g);color:var(--bg);align-self:flex-end;border-bottom-right-radius:4px}
+#cs{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 8px}#cs button{border:1.5px solid var(--g);background:transparent;color:var(--g);border-radius:999px;padding:4px 12px;font-size:.8rem;cursor:pointer}
+.cf{display:flex;gap:8px;padding:10px;border-top:1px solid var(--bg2)}.cf input{margin:0}.cf .btn{padding:8px 16px}
 </style></head><body>
-<header><a class="logo" href="#">INTORE</a>
+<header><a class="logo" href="#" onclick="goHome();return false" aria-label="INTORE Storefront home">INTORE<small>Storefront</small></a>
 <div class="sb"><input id="q" type="search" placeholder="Search items" oninput="draw()" aria-label="Search items"><button class="btn" onclick="draw();document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Search</button></div>
 <button class="btn" onclick="openCart()">Cart · <span id="cc">0</span> · <span id="hc">0 RWF</span></button></header>
-<section class="hero"><div class="hb"><h1>Shop smart.<br>Pay your way.</h1><p>Browse the INTORE storefront, add what you need, and pay by card or mobile money.</p><a class="btn" href="#shop">Start shopping</a></div>
-<div class="hs"><div class="ht"><b>Mobile Money</b><span>Pay with MoMo, then confirm on WhatsApp.</span></div><div class="ht"><b>Card payments</b><span>Secure checkout through our payment link.</span></div></div></section>
+<section class="hero"><div><h1>Your trusted place to shop</h1><p>INTORE Storefront</p></div><div class="chips"><span>Mobile Money</span><span>Card payments</span></div></section>
 <section class="sec" id="nwS"><div class="sh"><h2>Just added</h2></div><div class="row" id="nw"></div></section>
 <section class="sec" id="shop"><div class="sh"><h2>All items</h2><span id="rc"></span></div><div class="grid" id="g"></div></section>
 <footer><h3 id="terms">Terms &amp; Conditions</h3><ol>
@@ -98,8 +106,10 @@ footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-si
 <h4>Payment &amp; contact</h4><input id="sm" placeholder="MoMo number"><input id="sn" placeholder="MoMo account name"><input id="sw" placeholder="WhatsApp number with country code, e.g. 250788123456"><input id="se" type="email" placeholder="Order email"><input id="sc" placeholder="Card payment link (https://...)">
 <div style="display:flex;gap:10px"><button class="btn k" onclick="publish()">Publish changes</button><button class="btn w" onclick="closeAll()">Close</button></div><p id="as" style="margin-top:10px"></p></div></div>
 
+<button class="btn ask" id="askB" onclick="toggleChat()">Ask INTORE</button>
+<div class="chat" id="chat"><div class="ch"><b>Ask INTORE</b><button onclick="toggleChat()" aria-label="Close">×</button></div><div id="cm"></div><div id="cs"></div><form class="cf" onsubmit="send(event)"><input id="ci" placeholder="Ask a question" autocomplete="off"><button class="btn">Send</button></form></div>
 <script>
-const REPO='inewton-xo/root-and-stake',BR='main',$=id=>document.getElementById(id);
+const REPO='inewton-xo/intore-storefront',BR='main',$=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number(n).toLocaleString('en-US')+' RWF';
 let D={settings:{momoNumber:'',momoName:'',whatsapp:'',email:'',cardLink:''},products:[]},cart={},pend={};
@@ -143,6 +153,23 @@ async function publish(){const st=$('as');if(!$('tk').value.trim())return st.tex
 sessionStorage.setItem('it',$('tk').value.trim());D.settings={momoNumber:$('sm').value.trim(),momoName:$('sn').value.trim(),whatsapp:$('sw').value.trim(),email:$('se').value.trim(),cardLink:$('sc').value.trim()};
 try{st.textContent='Publishing…';for(const p of D.products)if(p.img.startsWith('data:')){const path=`images/${p.id}.jpg`;await gh(path,p.img.split(',')[1]);p.img=path}
 await gh('data.json',btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))));st.textContent='Published. The live site updates in about a minute.';draw()}catch(e){st.textContent='Failed: '+e.message}}
+function goHome(){closeAll();$('q').value='';draw();window.scrollTo({top:0,behavior:'smooth'})}
+// ---- FAQ assistant ----
+const FAQ=[
+{q:'How do I order?',k:['order','buy','purchase','checkout','cart'],a:()=>'Tap + on any item, open your cart, press Checkout, enter your name, phone and address, and choose how to pay. We confirm your order by WhatsApp or email.'},
+{q:'How can I pay?',k:['pay','payment','momo','mobile money','card','visa','mastercard','mtn','airtel'],a:()=>{const s=D.settings;return 'You can pay by Mobile Money'+(s.momoNumber?' (send to '+esc(s.momoNumber)+(s.momoName?', '+esc(s.momoName):'')+')':'')+(s.cardLink?' or by card through our secure payment link.':'. Card payments are not available yet.')+' Choose your option at checkout.'}},
+{q:'How does delivery work?',k:['deliver','shipping','ship','arrive','delivery fee'],a:()=>'We deliver to the address you give at checkout. We agree the delivery time and any fee with you when we confirm your order.'},
+{q:'What is your return policy?',k:['return','refund','damaged','wrong','exchange','broken'],a:()=>'Report damaged or wrong items within 48 hours of receiving them. Approved refunds go back to the original payment method.'},
+{q:'When is my order confirmed?',k:['confirm','confirmed','when is my order','status','track','received'],a:()=>'Your order is confirmed after we verify your payment and reply to you on WhatsApp or by email.'},
+{q:'Are items in stock?',k:['stock','available','availability','sold out'],a:()=>'Items are subject to stock. If something is unavailable we offer a replacement or a full refund.'},
+{q:'What currency are prices in?',k:['price','currency','rwf','cost','how much','franc'],a:()=>'All prices are in Rwandan francs (RWF).'},
+{q:'How can I contact you?',k:['contact','whatsapp','phone','email','call','talk','help','support'],a:()=>{const s=D.settings,w=s.whatsapp.replace(/\D/g,''),p=[];if(w)p.push(`chat with us on <a href="https://wa.me/${w}" target="_blank" rel="noopener">WhatsApp</a>`);if(s.email)p.push(`email <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>`);return p.length?'You can '+p.join(' or ')+'.':'Our contact details will be added soon.'}},
+{q:'Is my data safe?',k:['data','privacy','safe','secure','information'],a:()=>'We use your name, phone and address only to process and deliver your order, and we never sell your information.'}];
+function reply(t){const x=t.toLowerCase();let b=null,bs=0;FAQ.forEach(f=>{const n=f.k.filter(k=>x.includes(k)).length;if(n>bs){bs=n;b=f}});return b?b.a():'I am not sure about that one. Try one of the questions below, or contact us directly.'}
+function say(t,c){const d=document.createElement('div');d.className='m '+c;if(c=='u')d.textContent=t;else d.innerHTML=t;$('cm').appendChild(d);$('cm').scrollTop=1e9}
+function send(e,t){if(e)e.preventDefault();t=t||$('ci').value.trim();if(!t)return;$('ci').value='';say(t,'u');setTimeout(()=>say(reply(t),'b'),250)}
+function toggleChat(){const o=!$('chat').classList.contains('on');$('chat').classList.toggle('on',o);$('askB').style.display=o?'none':'';
+if(o&&!$('cm').children.length){say('Hi! I answer common questions about ordering, payment, delivery and returns. What would you like to know?','b');$('cs').innerHTML=FAQ.map((f,i)=>`<button onclick="send(null,FAQ[${i}].q)">${f.q}</button>`).join('')}}
 // ---- Init ----
 $('yr').textContent=new Date().getFullYear();
 fetch('data.json?'+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null).then(d=>{if(d&&d.products)D=d;draw()});draw();
