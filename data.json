@@ -11,5 +11,13 @@
   "s2": "images/step2.jpg",
   "s3": "images/step3.jpg"
  },
- "products": []
+ "products": [
+  {
+   "id": "p1794177157912",
+   "name": "Iphone 13",
+   "price": 400000,
+   "details": "128gb\n4gb RAM\nUS version",
+   "img": ""
+  }
+ ]
 }
