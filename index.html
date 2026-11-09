@@ -83,23 +83,48 @@ footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-si
 .ht{padding:16px 18px 20px}.ht h3{font-size:1.15rem;margin-bottom:6px}.ht p{color:var(--m);font-size:.95rem}
 .pa{display:flex;justify-content:space-between;gap:8px;align-items:end}.pa label{flex:1}.pa a{padding-bottom:14px;font-size:.85rem}
 @media(max-width:760px){.how{grid-template-columns:1fr}}
+
+.pr-sec h2{font-size:1.15rem}.pr-sub{color:var(--m);font-size:.92rem;margin:4px 0 14px}
+.pr-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pr-i{border:1px solid var(--bd);border-radius:12px;padding:16px;background:#fff}
+.pr-i svg{width:30px;height:30px;stroke:var(--g);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+.pr-i b{display:block;margin-bottom:4px}.pr-i p{font-size:.88rem;color:var(--m);line-height:1.45}
+.pr-box{margin-top:14px;background:var(--gl);border-left:4px solid var(--g);border-radius:8px;padding:14px 16px;font-size:.92rem;line-height:1.5}
+.pr-box a{color:var(--g);font-weight:700;cursor:pointer}
+.fm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+.fm label{border:1.5px solid var(--bd);border-radius:10px;padding:12px;cursor:pointer;display:block;text-align:center;font-weight:700}
+.fm label small{display:block;font-weight:400;color:var(--m);font-size:.78rem;margin-top:2px}
+.fm input{display:none}.fm label:has(input:checked){border-color:var(--g);background:var(--gl);color:var(--g)}
+.pm.p3{grid-template-columns:1fr 1fr 1fr}.pm label.off{opacity:.45;cursor:not-allowed}
+@media(max-width:980px){.pr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pr-grid{grid-template-columns:1fr}.pm.p3{grid-template-columns:1fr}}
 </style></head><body>
 <div class="tb"><span>Welcome to INTORE Storefront · Your trusted place to shop</span><span><a href="#" onclick="faq(0);return false">Help</a><a href="#terms">Terms</a></span></div>
 <header><a class="logo" href="#" onclick="goHome();return false" aria-label="INTORE Storefront home"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12h20l-1.5 16h-17z" fill="#fff"/><path d="M11 12V9a5 5 0 0 1 10 0v3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><rect x="14.5" y="16" width="3" height="8" rx="1.5" fill="#8b5a2b"/></svg>INTORE<small>Storefront</small></a>
 <div class="sb"><input id="q" type="search" placeholder="Search items" oninput="draw()" aria-label="Search items"><button class="sbtn" onclick="draw();document.getElementById('shop').scrollIntoView({behavior:'smooth'})"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Search</button></div>
 <button class="btn cartb" onclick="openCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2.2 11h10.3l2-8H6.5"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>Cart · <span id="cc">0</span> · <span id="hc">0 RWF</span></button></header>
-<section class="top3"><nav class="lm"><h4>Store menu</h4><a href="#nwS">Just added<i>›</i></a><a href="#shop">All items<i>›</i></a><button onclick="faq(0)">How to order<i>›</i></button><button onclick="faq(1)">Payment methods<i>›</i></button><button onclick="faq(2)">Delivery<i>›</i></button><button onclick="faq(3)">Returns and refunds<i>›</i></button><a href="#terms">Terms and conditions<i>›</i></a></nav>
-<div class="bn" id="bn"><div><h1>Your trusted place to shop</h1><p>INTORE Storefront. Pay by card or mobile money.</p><a class="btn w" href="#shop">Start shopping</a></div></div>
-<aside class="wp"><div class="av"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12h20l-1.5 16h-17z" fill="#fff"/><path d="M11 12V9a5 5 0 0 1 10 0v3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><rect x="14.5" y="16" width="3" height="8" rx="1.5" fill="#8b5a2b"/></svg></div><b>Welcome to INTORE</b><span>Your trusted place to shop</span><a class="btn" href="#shop">Start shopping</a><button class="btn w" onclick="faq(0)">Ask a question</button><ul><li>Pay by Mobile Money</li><li>Pay by card</li><li>Order confirmed on WhatsApp</li></ul></aside></section>
+<section class="top3"><nav class="lm"><h4>Store menu</h4><a href="#nwS">Just added<i>›</i></a><a href="#shop">All items<i>›</i></a><button onclick="faq(0)">How to order<i>›</i></button><button onclick="faq(1)">Payment methods<i>›</i></button><button onclick="faq(2)">Delivery<i>›</i></button><button onclick="faq(3)">Returns and refunds<i>›</i></button><a href="#promise">Authenticity promise<i>›</i></a><button onclick="faq(10)">Pay at pickup<i>›</i></button><a href="#terms">Terms and conditions<i>›</i></a></nav>
+<div class="bn" id="bn"><div><h1>Your trusted place to shop</h1><p>Genuine items, honest listings and a money-back authenticity guarantee. Inspect your item before you pay when you pick up.</p><a class="btn w" href="#shop">Start shopping</a></div></div>
+<aside class="wp"><div class="av"><svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 12h20l-1.5 16h-17z" fill="#fff"/><path d="M11 12V9a5 5 0 0 1 10 0v3" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><rect x="14.5" y="16" width="3" height="8" rx="1.5" fill="#8b5a2b"/></svg></div><b>Welcome to INTORE</b><span>Your trusted place to shop</span><a class="btn" href="#shop">Start shopping</a><button class="btn w" onclick="faq(0)">Ask a question</button><ul><li>Authenticity guaranteed</li><li>Pay at pickup, after inspection</li><li>Mobile Money or card</li><li>Order confirmed on WhatsApp</li></ul></aside></section>
+<section class="sec pr-sec" id="promise"><div class="sh"><h2>The INTORE Promise</h2></div>
+<p class="pr-sub">Every item we sell is covered by our Authenticity Guarantee and Buyer Protection.</p>
+<div class="pr-grid">
+<div class="pr-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.500-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><b>Authenticity guaranteed</b><p>Every item is genuine and described honestly. If an item is proven not to be as described or not genuine, you get a full refund.</p></div>
+<div class="pr-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/><path d="M8.500 11l2 2 3.500-3.500"/></svg><b>Inspect before you pay</b><p>Choose pickup and pay only after you have checked the item in person. If it is not what we described, you do not pay.</p></div>
+<div class="pr-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg><b>Secure, verified payment</b><p>Pay by Mobile Money or card. Deliveries are paid in advance, and we confirm every payment to you by WhatsApp or email.</p></div>
+<div class="pr-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.300L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.300L4 15"/><path d="M4 20v-5h5"/></svg><b>Easy resolution</b><p>Wrong or damaged item? Tell us within 48 hours. Doubts about authenticity? Tell us within 7 days. We reply fast and put it right.</p></div>
+</div>
+<div class="pr-box"><b>Our commitments.</b> We list only items we have checked, we state the condition and specifications plainly, and we never use stock photos to hide an item&#8217;s real state. <a onclick="faq(9)">How the guarantee works</a> &middot; <a href="#terms">Full policy</a></div></section>
 <section class="sec" id="how"><div class="sh"><h2>Shop with INTORE in three easy steps</h2></div><div class="how" id="hw"></div></section>
 <section class="sec" id="nwS"><div class="sh"><h2>Just added</h2></div><div class="row" id="nw"></div></section>
 <section class="sec" id="shop"><div class="sh"><h2>All items</h2><span id="rc"></span></div><div class="grid" id="g"></div></section>
 <footer><h3 id="terms">Terms &amp; Conditions</h3><ol>
 <li><b>Orders.</b> An order is confirmed only after we verify your payment and reply to you by WhatsApp or email.</li>
 <li><b>Prices.</b> All prices are in Rwandan francs (RWF). We may correct pricing errors and will contact you before processing an affected order.</li>
-<li><b>Payment.</b> You can pay by card through our secure payment link, or by mobile money (MoMo) to the number shown at checkout. Use your name or order details as the payment reference.</li>
-<li><b>Delivery.</b> We deliver to the address you provide. Delivery times and any delivery fee are agreed with you when we confirm your order.</li>
-<li><b>Returns &amp; refunds.</b> Report damaged or wrong items within 48 hours of receiving them. Approved refunds go back to the original payment method.</li>
+<li><b>Payment.</b> <b>Delivery orders are paid in advance</b>, by card through our secure payment link or by mobile money (MoMo) to the number shown at checkout, before we dispatch. <b>Pickup orders can be paid at pickup</b>, in cash or MoMo, after you have inspected the item, or in advance if you prefer. Use your name or order details as the payment reference.</li>
+<li><b>Pickup and delivery.</b> Pickup orders are held for you for 48 hours after we confirm them, then released if not collected. We confirm the pickup point and time with you on WhatsApp. Pay at pickup is not available for delivery orders. We deliver to the address you provide, and delivery times and any delivery fee are agreed with you when we confirm your order.</li>
+<li><b>Authenticity Guarantee.</b> We guarantee that every item is genuine and matches its description, including condition and specifications. If you believe an item is not genuine or not as described, contact us within 7 days of receiving it and keep the item and its packaging unused where possible. If we confirm, or cannot show, that the item is genuine and as described, we refund you in full, including any delivery fee. If you pay at pickup, you may refuse an item that does not match its description without paying.</li>
+<li><b>Returns &amp; refunds.</b> Report damaged or wrong items within 48 hours of receiving them, with clear photos. Approved refunds go back to the original payment method, normally within 5 working days.</li>
 <li><b>Availability.</b> Items are subject to stock. If an item is unavailable we will offer a replacement or a full refund.</li>
 <li><b>Your data.</b> We use your name, phone and address only to process and deliver your order, and we do not sell your information.</li>
 <li><b>Changes.</b> We may update these terms at any time. Placing an order means you accept the terms shown on this page.</li></ol>
@@ -109,8 +134,9 @@ footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-si
 <aside class="dr" id="dr"><div class="dh"><h3>Your cart</h3><button class="btn w" onclick="closeAll()">Close</button></div><div id="cl"></div><div class="tot"><span>Total</span><span id="ct"></span></div><button class="btn" id="cb" onclick="openCo()">Checkout</button></aside>
 
 <div class="md" id="co"><div class="mb"><h3>Checkout</h3>
-<label>Full name<input id="fn"></label><label>Phone number<input id="fp" type="tel"></label><label>Delivery address<input id="fa"></label>
-<h4>Pay with</h4><div class="pm"><label><input type="radio" name="pay" value="MoMo" checked onchange="payUI()">Mobile Money</label><label><input type="radio" name="pay" value="Card" onchange="payUI()">Card</label></div>
+<label>Full name<input id="fn"></label><label>Phone number<input id="fp" type="tel"></label><h4>Get your order</h4><div class="fm"><label><input type="radio" name="ful" value="Pickup" checked onchange="payUI()">Pickup<small>Inspect, then pay</small></label><label><input type="radio" name="ful" value="Delivery" onchange="payUI()">Delivery<small>Paid in advance</small></label></div>
+<label id="fal" style="display:none">Delivery address<input id="fa"></label>
+<h4>Pay with</h4><div class="pm p3"><label id="pl0"><input type="radio" name="pay" value="Pickup" checked onchange="payUI()">Pay at pickup</label><label><input type="radio" name="pay" value="MoMo" onchange="payUI()">Mobile Money</label><label><input type="radio" name="pay" value="Card" onchange="payUI()">Card</label></div>
 <div class="note" id="pn"></div><div id="sl"></div>
 <div style="display:flex;gap:10px;margin-top:12px"><button class="btn" onclick="placeOrder()">Place order</button><button class="btn w" onclick="closeAll()">Cancel</button></div></div></div>
 
@@ -119,7 +145,7 @@ footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-si
 <h4>Add an item</h4><input id="an" placeholder="Item name"><input id="ap" type="number" min="0" placeholder="Price in RWF"><textarea id="ad" rows="3" placeholder="Details"></textarea><input id="af" type="file" accept="image/*"><button class="btn" onclick="addItem()">Add item</button>
 <h4>Items</h4><div id="al"></div>
 <h4>Home page photos</h4><div id="ph"></div>
-<h4>Payment &amp; contact</h4><input id="sm" placeholder="MoMo number"><input id="sn" placeholder="MoMo account name"><input id="sw" placeholder="WhatsApp number with country code, e.g. 250788123456"><input id="se" type="email" placeholder="Order email"><input id="sc" placeholder="Card payment link (https://...)">
+<h4>Payment &amp; contact</h4><input id="sm" placeholder="MoMo number"><input id="sn" placeholder="MoMo account name"><input id="sw" placeholder="WhatsApp number with country code, e.g. 250788123456"><input id="se" type="email" placeholder="Order email"><input id="sc" placeholder="Card payment link (https://...)"><input id="sp" placeholder="Pickup point (e.g. area or address in Kigali)">
 <div style="display:flex;gap:10px"><button class="btn k" onclick="publish()">Publish changes</button><button class="btn w" onclick="closeAll()">Close</button></div><p id="as" style="margin-top:10px"></p></div></div>
 
 <button class="btn ask" id="askB" onclick="toggleChat()">Ask INTORE</button>
@@ -128,7 +154,7 @@ footer h3{margin-bottom:12px}footer ol{padding-left:20px;max-width:820px;font-si
 const REPO='inewton-xo/intore-storefront',BR='main',$=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>Number(n).toLocaleString('en-US')+' RWF';
-let D={settings:{momoNumber:'',momoName:'',whatsapp:'',email:'',cardLink:''},products:[],photos:{}},cart={},pend={};
+let D={settings:{momoNumber:'',momoName:'',whatsapp:'',email:'',cardLink:'',pickupLocation:''},products:[],photos:{}},cart={},pend={};
 try{cart=JSON.parse(localStorage.getItem('ic')||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem('ic',JSON.stringify(cart))}catch(e){}};
 const P=i=>D.products.find(p=>p.id==i);
@@ -147,16 +173,21 @@ function closeAll(){['ov','dr','co','adm'].forEach(i=>$(i).classList.remove('on'
 const openCart=()=>show('dr');
 function openCo(){$('sl').innerHTML='';show('co');payUI()}
 const pay=()=>document.querySelector('[name=pay]:checked').value;
-function payUI(){const s=D.settings,m=pay()==='MoMo';
-$('pn').innerHTML=m?(s.momoNumber?`Send <b>${fmt(total())}</b> to MoMo number <b>${esc(s.momoNumber)}</b>${s.momoName?` (${esc(s.momoName)})`:''}, then press Place order to send us your details.`:'MoMo number not set yet. Place your order and we will share payment details.'):(s.cardLink?'Press Place order to open our secure card payment page, then send us your order details.':'Card payments are not available yet. Please choose Mobile Money.')}
-function placeOrder(){const n=$('fn').value.trim(),p=$('fp').value.trim(),a=$('fa').value.trim();if(!n||!p||!a)return alert('Please fill in your name, phone and address.');
-const s=D.settings,m=pay()==='MoMo';if(!m&&!s.cardLink)return alert('Card payments are not available yet.');
-const t='New INTORE order\n\n'+Object.keys(cart).map(i=>`${cart[i]} x ${P(i).name} = ${fmt(P(i).price*cart[i])}`).join('\n')+`\n\nTotal: ${fmt(total())}\nPayment: ${pay()}\nName: ${n}\nPhone: ${p}\nAddress: ${a}`;
+const ful=()=>document.querySelector('[name=ful]:checked').value;
+function payUI(){const s=D.settings,d=ful()==='Delivery',pk=$('pl0'),r=pk.querySelector('input');
+$('fal').style.display=d?'':'none';pk.classList.toggle('off',d);r.disabled=d;
+if(d&&r.checked)document.querySelector('[name=pay][value=MoMo]').checked=true;
+if(!d&&!document.querySelector('[name=pay]:checked'))r.checked=true;
+const p=pay(),m=p==='MoMo';
+$('pn').innerHTML=(d?'<b>Delivery orders are paid in advance.</b> Pay at pickup is available only when you collect your order. ':'')+(p==='Pickup'?`Reserve your item now and pay when you collect it, in cash or MoMo, <b>after you have inspected it</b>. If it is not as described, you do not pay. We hold pickup orders for 48 hours. ${s.pickupLocation?'Pickup point: <b>'+esc(s.pickupLocation)+'</b>.':'We confirm the pickup point and time with you on WhatsApp.'}`:m?(s.momoNumber?`Send <b>${fmt(total())}</b> to MoMo number <b>${esc(s.momoNumber)}</b>${s.momoName?` (${esc(s.momoName)})`:''}, then press Place order to send us your details.`:'MoMo number not set yet. Place your order and we will share payment details.'):(s.cardLink?'Press Place order to open our secure card payment page, then send us your order details.':'Card payments are not available yet. Please choose Mobile Money.'))}
+function placeOrder(){const n=$('fn').value.trim(),p=$('fp').value.trim(),a=$('fa').value.trim(),d=ful()==='Delivery';if(!n||!p||(d&&!a))return alert(d?'Please fill in your name, phone and address.':'Please fill in your name and phone number.');
+const s=D.settings,py=pay(),m=py==='MoMo',pk=py==='Pickup';if(d&&pk)return alert('Pay at pickup is not available for delivery. Please choose Mobile Money or Card.');if(!pk&&!m&&!s.cardLink)return alert('Card payments are not available yet.');
+const t='New INTORE order\n\n'+Object.keys(cart).map(i=>`${cart[i]} x ${P(i).name} = ${fmt(P(i).price*cart[i])}`).join('\n')+`\n\nTotal: ${fmt(total())}\nGet order: ${d?'Delivery':'Pickup'}\nPayment: ${pk?'Pay at pickup (after inspection)':py}\nName: ${n}\nPhone: ${p}`+(d?`\nAddress: ${a}`:'');
 const u=s.whatsapp?`https://wa.me/${s.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(t)}`:s.email?`mailto:${s.email}?subject=${encodeURIComponent('New order')}&body=${encodeURIComponent(t)}`:'';
 if(!u)return alert('The shop has no contact set up yet. Please try again later.');
-if(m){location.href=u}else{window.open(s.cardLink,'_blank','noopener');$('sl').innerHTML=`<div class="note">After paying by card, <a href="${u}" target="_blank" rel="noopener"><b>tap here to send your order details</b></a>.</div>`}}
+if(pk||m){location.href=u}else{window.open(s.cardLink,'_blank','noopener');$('sl').innerHTML=`<div class="note">After paying by card, <a href="${u}" target="_blank" rel="noopener"><b>tap here to send your order details</b></a>.</div>`}}
 // ---- Admin ----
-function openAdm(){$('tk').value=sessionStorage.getItem('it')||'';const s=D.settings;$('sm').value=s.momoNumber;$('sn').value=s.momoName;$('sw').value=s.whatsapp;$('se').value=s.email;$('sc').value=s.cardLink;admList();admPhotos();show('adm')}
+function openAdm(){$('tk').value=sessionStorage.getItem('it')||'';const s=D.settings;$('sm').value=s.momoNumber;$('sn').value=s.momoName;$('sw').value=s.whatsapp;$('se').value=s.email;$('sc').value=s.cardLink;$('sp').value=s.pickupLocation||'';admList();admPhotos();show('adm')}
 function admList(){$('al').innerHTML=D.products.map(p=>`<div class="al"><span>${esc(p.name)} · ${fmt(p.price)}</span><a href="#" onclick="del('${p.id}');return false">Delete</a></div>`).join('')||'<p>No items.</p>'}
 function del(i){D.products=D.products.filter(p=>p.id!=i);delete pend[i];admList();draw()}
 function addItem(){const name=$('an').value.trim(),price=Number($('ap').value);if(!name||!(price>=0)||$('ap').value==='')return alert('Enter a name and a price.');
@@ -166,22 +197,24 @@ async function gh(path,content){const h={Authorization:'Bearer '+$('tk').value.t
 const g=await fetch(u+'?ref='+BR,{headers:h}),sha=g.ok?(await g.json()).sha:undefined;
 const r=await fetch(u,{method:'PUT',headers:h,body:JSON.stringify({message:'Update store',content,branch:BR,sha})});if(!r.ok)throw new Error((await r.json()).message)}
 async function publish(){const st=$('as');if(!$('tk').value.trim())return st.textContent='Enter your GitHub token first.';
-sessionStorage.setItem('it',$('tk').value.trim());D.settings={momoNumber:$('sm').value.trim(),momoName:$('sn').value.trim(),whatsapp:$('sw').value.trim(),email:$('se').value.trim(),cardLink:$('sc').value.trim()};
+sessionStorage.setItem('it',$('tk').value.trim());D.settings={momoNumber:$('sm').value.trim(),momoName:$('sn').value.trim(),whatsapp:$('sw').value.trim(),email:$('se').value.trim(),cardLink:$('sc').value.trim(),pickupLocation:$('sp').value.trim()};
 try{st.textContent='Publishing…';for(const p of D.products)if(p.img.startsWith('data:')){const path=`images/${p.id}.jpg`;await gh(path,p.img.split(',')[1]);p.img=path}
 for(const [k] of PH){const v=D.photos&&D.photos[k];if(v&&v.startsWith('data:')){const path=`images/${k}-${Date.now()}.jpg`;await gh(path,v.split(',')[1]);D.photos[k]=path}}
 await gh('data.json',btoa(unescape(encodeURIComponent(JSON.stringify(D,null,1)))));st.textContent='Published. The live site updates in about a minute.';draw()}catch(e){st.textContent='Failed: '+e.message}}
 function goHome(){closeAll();$('q').value='';draw();window.scrollTo({top:0,behavior:'smooth'})}
 // ---- FAQ assistant ----
 const FAQ=[
-{q:'How do I order?',k:['order','buy','purchase','checkout','cart'],a:()=>'Tap + on any item, open your cart, press Checkout, enter your name, phone and address, and choose how to pay. We confirm your order by WhatsApp or email.'},
-{q:'How can I pay?',k:['pay','payment','momo','mobile money','card','visa','mastercard','mtn','airtel'],a:()=>{const s=D.settings;return 'You can pay by Mobile Money'+(s.momoNumber?' (send to '+esc(s.momoNumber)+(s.momoName?', '+esc(s.momoName):'')+')':'')+(s.cardLink?' or by card through our secure payment link.':'. Card payments are not available yet.')+' Choose your option at checkout.'}},
-{q:'How does delivery work?',k:['deliver','shipping','ship','arrive','delivery fee'],a:()=>'We deliver to the address you give at checkout. We agree the delivery time and any fee with you when we confirm your order.'},
+{q:'How do I order?',k:['order','buy','purchase','checkout','cart'],a:()=>'Tap + on any item, open your cart, press Checkout, enter your name, phone and address, and choose pickup or delivery and how to pay. We confirm your order by WhatsApp or email.'},
+{q:'How can I pay?',k:['pay','payment','momo','mobile money','card','visa','mastercard','mtn','airtel'],a:()=>{const s=D.settings;return 'You can pay by Mobile Money'+(s.momoNumber?' (send to '+esc(s.momoNumber)+(s.momoName?', '+esc(s.momoName):'')+')':'')+(s.cardLink?' or by card through our secure payment link.':'. Card payments are not available yet.')+' If you collect your order, you can also pay at pickup after inspecting the item. Delivery orders are paid in advance.'}},
+{q:'How does delivery work?',k:['deliver','shipping','ship','arrive','delivery fee'],a:()=>'We deliver to the address you give at checkout. Delivery orders are paid in advance. We agree the delivery time and any fee with you when we confirm your order. You can also pick up your order and pay then.'},
 {q:'What is your return policy?',k:['return','refund','damaged','wrong','exchange','broken'],a:()=>'Report damaged or wrong items within 48 hours of receiving them. Approved refunds go back to the original payment method.'},
 {q:'When is my order confirmed?',k:['confirm','confirmed','when is my order','status','track','received'],a:()=>'Your order is confirmed after we verify your payment and reply to you on WhatsApp or by email.'},
 {q:'Are items in stock?',k:['stock','available','availability','sold out'],a:()=>'Items are subject to stock. If something is unavailable we offer a replacement or a full refund.'},
 {q:'What currency are prices in?',k:['price','currency','rwf','cost','how much','franc'],a:()=>'All prices are in Rwandan francs (RWF).'},
 {q:'How can I contact you?',k:['contact','whatsapp','phone','email','call','talk','help','support'],a:()=>{const s=D.settings,w=s.whatsapp.replace(/\D/g,''),p=[];if(w)p.push(`chat with us on <a href="https://wa.me/${w}" target="_blank" rel="noopener">WhatsApp</a>`);if(s.email)p.push(`email <a href="mailto:${esc(s.email)}">${esc(s.email)}</a>`);return p.length?'You can '+p.join(' or ')+'.':'Our contact details will be added soon.'}},
-{q:'Is my data safe?',k:['data','privacy','safe','secure','information'],a:()=>'We use your name, phone and address only to process and deliver your order, and we never sell your information.'}];
+{q:'Is my data safe?',k:['data','privacy','safe','secure','information'],a:()=>'We use your name, phone and address only to process and deliver your order, and we never sell your information.'},
+{q:'How does the authenticity guarantee work?',k:['guarantee','genuine','authentic','original','fake','counterfeit','scam','legit','trust'],a:()=>'Every item is genuine and described honestly. If you think an item is not genuine or not as described, contact us within 7 days of receiving it. If we confirm, or cannot show, that it is genuine and as described, you get a full refund. If you pay at pickup, you can refuse an item that does not match its description without paying.'},
+{q:'Can I pay at pickup?',k:['pay at pickup','pickup','pick up','collect','cash','in person','inspect'],a:()=>'Yes. Choose Pickup at checkout and Pay at pickup. You inspect the item first and pay only if you are happy, in cash or MoMo. We hold pickup orders for 48 hours'+(D.settings.pickupLocation?'. Pickup point: '+esc(D.settings.pickupLocation)+'.':' and confirm the pickup point on WhatsApp. ')+' Pay at pickup is not available for delivery orders, which are paid in advance.'}];
 function reply(t){const x=t.toLowerCase();let b=null,bs=0;FAQ.forEach(f=>{const n=f.k.filter(k=>x.includes(k)).length;if(n>bs){bs=n;b=f}});return b?b.a():'I am not sure about that one. Try one of the questions below, or contact us directly.'}
 function say(t,c){const d=document.createElement('div');d.className='m '+c;if(c=='u')d.textContent=t;else d.innerHTML=t;$('cm').appendChild(d);$('cm').scrollTop=1e9}
 function send(e,t){if(e)e.preventDefault();t=t||$('ci').value.trim();if(!t)return;$('ci').value='';say(t,'u');setTimeout(()=>say(reply(t),'b'),250)}
